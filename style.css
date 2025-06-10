@@ -1,0 +1,254 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333;
+}
+
+.top-bar {
+  background-color: #3c00ff;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.main-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.main-section h2 {
+  color: #e297ed;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #f8f8f8;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}
+
+.card:hover,
+.card:active {
+  background-color: #e0f7ff; /* Azul bem leve */
+  transform: scale(1.08); /* Aumenta mais */
+  border: 2px solid #a9f0f8; /* Borda azul neon */
+  box-shadow: 0 0 12px #d5f2f5, 0 0 24px #aef7ff; /* Efeito neon */
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #ff90e8;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card a {
+  color: #3c00ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f8f8f8; /* Um fundo claro para contraste */
+}
+
+.main-nav {
+    background-color: #007bff; /* Cor de fundo do menu (um azul típico) */
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para destacar */
+}
+
+.nav-list {
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para alinhar os itens horizontalmente */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+}
+
+.nav-item {
+    margin: 5px 15px; /* Espaçamento entre os itens */
+}
+
+.nav-link {
+    color: #ffffff; /* Cor do texto do link (branco) */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas nos links */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse/focar */
+}
+
+/* Media Queries para Responsividade (Mobile First) */
+
+/* Para telas um pouco maiores (ex: tablets em modo retrato) */
+@media (min-width: 600px) {
+    .nav-list {
+        justify-content: center; /* Centraliza os itens em telas maiores */
+    }
+}
+
+/* Para telas maiores (ex: desktops) */
+@media (min-width: 992px) {
+    .nav-item {
+        margin: 0 25px; /* Mais espaçamento em telas maiores */
+    }
+    .nav-link {
+        font-size: 1.2em; /* Texto um pouco maior em telas maiores */
+    }
+}
+/* Estilos para o Footer */
+.main-footer {
+    background-color: #007bff; /* Cor de fundo do rodapé (o mesmo azul do nav, para consistência) */
+    color: #ffffff; /* Cor do texto */
+    padding: 30px 0; /* REMOVIDO: Padding horizontal aqui, será controlado pelo container */
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* REMOVIDO: max-width para que o conteúdo se espalhe */
+    width: 100%; /* Garante que o container ocupe 100% da largura do main-footer */
+    margin: 0 auto;
+    gap: 15px;
+    padding: 0 50px; /* AUMENTADO: Padding horizontal para empurrar o conteúdo das bordas da tela */
+    box-sizing: border-box; /* Garante que o padding não adicione à largura total */
+}
+
+.footer-brand,
+.footer-links,
+.footer-services,
+.footer-contact {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 15px;
+}
+
+/* Mantendo os demais estilos para logo, h4, links, etc. conforme a última alteração */
+.footer-brand .footer-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.main-footer h4 {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 3px;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-footer ul li {
+    margin-bottom: 6px;
+}
+
+.footer-link,
+.main-footer p,
+.main-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.main-footer a:hover {
+    color: #d4edda;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 768px (celulares em modo retrato) */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px; /* Ajustado: Padding horizontal para mobile */
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-services,
+    .footer-contact {
+        min-width: unset;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .main-footer h4 {
+        margin-bottom: 8px;
+    }
+
+    .social-icons {
+        margin-top: 8px;
+    }
+}

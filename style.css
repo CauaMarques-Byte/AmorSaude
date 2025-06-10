@@ -298,39 +298,6 @@ body {
   cursor: pointer;
 }
 
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    background-color: #007bff;
-    width: 100%;
-    text-align: center;
-  }
-
-  .main-nav.nav-open {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
-  .nav-item {
-    margin: 10px 0;
-  }
-
-  .nav-link {
-    padding: 10px;
-    display: block;
-  }
-}
-
 @media (max-width: 768px) {
   .cards-container {
     flex-direction: column;

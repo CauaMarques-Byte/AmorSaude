@@ -252,3 +252,93 @@ body {
         margin-top: 8px;
     }
 }
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Quase tela cheia em mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-area {
+    padding: 0 20px;
+    gap: 16px;
+  }
+
+  .whatsapp-btn {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+
+  .footer-brand .footer-logo {
+    max-width: 90px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8em;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #007bff;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav.nav-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    padding: 10px;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

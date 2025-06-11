@@ -1,9 +1,13 @@
-body {
+body, html {
   font-family: Arial, sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: #333;
+  background: #f5f5f5;
+  color: #000000;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f8f8f8; /* Um fundo claro para contraste */
 }
 
 .top-bar {
@@ -27,9 +31,11 @@ body {
 
 .cards-container {
   display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -37,7 +43,8 @@ body {
 .card {
   background: #f8f8f8;
   padding: 20px;
-  width: 280px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -45,16 +52,17 @@ body {
   box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
 }
 
+
 .card:hover {
   background-color: #f0f0f0;
 }
 
 .card:hover,
 .card:active {
-  background-color: #e0f7ff; /* Azul bem leve */
-  transform: scale(1.08); /* Aumenta mais */
-  border: 2px solid #a9f0f8; /* Borda azul neon */
-  box-shadow: 0 0 12px #d5f2f5, 0 0 24px #aef7ff; /* Efeito neon */
+  background-color: #e0f7ff;
+  transform: scale(1.03);
+  border: 1px solid #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
 }
 
 .icon {
@@ -71,20 +79,20 @@ body {
 
 .card p {
   font-size: 14px;
-  color: #666;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .card a {
-  color: #3c00ff;
-  text-decoration: none;
-  font-weight: bold;
+  color: #007bff;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 8px;
+  transition: color 0.3s;
 }
-
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f8f8f8; /* Um fundo claro para contraste */
+.card a:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 .main-nav {
@@ -180,7 +188,7 @@ body {
     color: #ffffff;
     font-size: 1.1em;
     margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 3px;
 }
 
@@ -232,7 +240,7 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 0 20px; /* Ajustado: Padding horizontal para mobile */
+        padding: 0 20px;
     }
 
     .footer-brand,
@@ -253,6 +261,16 @@ body {
     }
 }
 
+.card {
+  box-sizing: border-box;
+}
+
+.cards-container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*Cards em coluna mobile*/
 @media (max-width: 768px) {
   .cards-container {
     flex-direction: column;
@@ -287,3 +305,74 @@ body {
     max-width: 90px;
   }
 }
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaço entre logo e botão */
+  margin: 40px auto; /* Espaçamento externo e centralização */
+}
+
+.logo-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  display: block;
+}
+
+/* Brilho da logo */
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.logo-container:hover::after {
+  animation: brilho 1s ease forwards;
+}
+
+@keyframes brilho {
+  from {
+    left: -75%;
+  }
+  to {
+    left: 125%;
+  }
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+

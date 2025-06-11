@@ -1,5 +1,5 @@
     body {
-    background-image: url('v870-tang-36.jpg');
+    background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -161,7 +161,7 @@
 .main-footer {
     background-color: #007bff; /* Cor de fundo do rodapé (o mesmo azul do nav, para consistência) */
     color: #ffffff; /* Cor do texto */
-    padding: 30px 0; /* REMOVIDO: Padding horizontal aqui, será controlado pelo container */
+    padding: 70px 0; /* REMOVIDO: Padding horizontal aqui, será controlado pelo container */
     margin-top: 40px;
 }
 
@@ -173,7 +173,7 @@
     width: 100%; /* Garante que o container ocupe 100% da largura do main-footer */
     margin: 0 auto;
     gap: 15px;
-    padding: 0 50px; /* AUMENTADO: Padding horizontal para empurrar o conteúdo das bordas da tela */
+    padding: 0 100px; /* AUMENTADO: Padding horizontal para empurrar o conteúdo das bordas da tela */
     box-sizing: border-box; /* Garante que o padding não adicione à largura total */
 }
 

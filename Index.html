@@ -6,92 +6,8 @@
   <title>Clínica Médica</title>
   <link rel="stylesheet" href="style.css">
 
-  <style>
-  .logo-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* Espaço entre logo e botão */
-  margin: 40px auto; /* Espaçamento externo e centralização */
-}
-
-.logo-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.logo {
-  width: 100%;
-  display: block;
-}
-
-/* Brilho da logo */
-.logo-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  transform: skewX(-25deg);
-  pointer-events: none;
-}
-
-.logo-container:hover::after {
-  animation: brilho 1s ease forwards;
-}
-
-@keyframes brilho {
-  from {
-    left: -75%;
-  }
-  to {
-    left: 125%;
-  }
-}
-
-/* Estilo do botão WhatsApp */
-.whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: 8px;
-  background-color: #25D366;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
-}
-
-.whatsapp-btn:hover {
-  transform: scale(1.05);
-}
-
-</style>
 </head>
 <body>
-
-  <header class="top-bar">
-    <nav class="main-nav">
-    <ul class="nav-list">
-        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Especialidades</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Telemedicina</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Localização</a></li>
-    </ul>
-</nav>
-  </header>
 
   <div class="logo-area">
   <div class="logo-container">
@@ -178,8 +94,6 @@
         <p>Amor Saúde não entrega seus exames por terceiros, e não cobra por entregar seus resultados</p>
         Saiba mais</a>
       </div>
-      
-  </section>
 
   <footer class="main-footer">
     <div class="footer-container">
@@ -213,11 +127,6 @@
             <p>Endereço: Quadra 7, Comércio Local Norte, 02 - Loja 1 - Sobradinho, Brasília - DF, 73036-105</p>
             <p>Telefone: (61) 3302-2282</p>
             <p>Email: Rh.net@gmail.com</p>
-            <div class="social-icons">
-                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
         </div>
     </div>
 </footer>

@@ -1,11 +1,12 @@
+ /* Estilo da fonte Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8f8f8; /* Cor de fundo clara para combinar com a imagem */
-            margin: 0;
-            padding: 0;
+            margin: 0; /* Remove margem padrão do corpo */
+            padding: 0; /* Remove padding padrão do corpo */
             overflow-x: hidden; /* Evita rolagem horizontal */
-            background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
+            background-image: url('v870-tang-36.jpg'); /* Correto! */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -17,33 +18,40 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0; /* Remove padding do container para maximizar a largura dos filhos */
         }
         .header {
             text-align: center;
-            padding: 20px 0;
+            padding: 20px; /* Adiciona padding ao cabeçalho para espaçamento interno */
             font-size: 1.5rem;
             font-weight: 600;
             color: #333;
-            letter-spacing: 0.2em; /* Espaçamento entre letras para 'PAULO COSTA' */
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+            box-sizing: border-box; /* Inclui padding na largura total */
         }
         .image-gallery {
             position: relative;
-            width: 100%;
-            max-width: 900px; /* Largura máxima para a galeria de imagens */
-            height: auto; /* Permite que a altura se ajuste ao conteúdo */
-            min-height: 250px; /* Altura mínima para garantir visibilidade */
-            max-height: 70vh; /* Altura máxima em relação à viewport para evitar imagens muito grandes */
+            width: 100%; /* Garante que ocupe 100% da largura disponível */
+            max-width: 900px; /* Largura máxima para a galeria de imagens em ecrãs maiores */
+            height: auto; /* Altura se ajusta automaticamente ao conteúdo */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Garante que o conteúdo que extrapolar a imagem seja cortado */
+            padding: 0 10px; /* Pequeno padding horizontal para evitar que a imagem toque as bordas */
+            box-sizing: border-box; /* Inclui padding na largura total */
+            /* Removidas as propriedades min-height e max-height para maior flexibilidade */
+            /* Removido overflow: hidden para evitar cortes na imagem */
         }
         .gallery-image {
-            width: 100%;
-            height: 100%; /* A imagem preencherá 100% da altura do seu contêiner */
+            width: 100%; /* A imagem preencherá 100% da largura do seu contentor */
+            height: auto; /* Mantém a proporção da imagem */
             object-fit: contain; /* Garante que a imagem inteira seja visível, sem ser cortada */
             border-radius: 12px; /* Cantos arredondados */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -53,7 +61,7 @@
             top: 50%;
             transform: translateY(-50%);
             background-color: rgba(255, 255, 255, 0.7);
-            border: 1px solid #ccc; /* Borda sutil */
+            border: 1px solid #ccc;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -64,7 +72,7 @@
             color: #333;
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;
-            user-select: none; /* Impede seleção de texto */
+            user-select: none;
             z-index: 10;
         }
         .nav-arrow:hover {
@@ -89,13 +97,13 @@
                 font-size: 2rem;
             }
             .nav-arrow.left {
-                left: -60px; /* Move as setas para fora da imagem em telas maiores */
+                left: -60px;
             }
             .nav-arrow.right {
-                right: -60px; /* Move as setas para fora da imagem em telas maiores */
+                right: -60px;
             }
             .image-gallery {
-                padding: 0 70px; /* Espaço para as setas laterais */
+                padding: 0 70px; /* Espaço para as setas laterais em telas maiores */
             }
         }
         @media (max-width: 767px) {
@@ -115,8 +123,8 @@
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px; /* Diminuído de 10px para 8px */
-            padding: 8px 12px; /* Diminuído de 10px 16px para 8px 12px */
+            gap: 8px;
+            padding: 8px 12px;
             border-radius: 8px;
             background-color: #25D366;
             color: white;
@@ -124,9 +132,50 @@
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.2s ease;
-            font-size: 0.9rem; /* Diminuído o tamanho da fonte */
+            font-size: 0.9rem;
         }
 
         .whatsapp-btn:hover {
             transform: scale(1.05);
+        }
+
+        .health-tip-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .health-tip-btn:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+        .health-tip-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            font-size: 1rem;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            word-wrap: break-word;
         }

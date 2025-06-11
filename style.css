@@ -1,13 +1,4 @@
-    body {
-    background-image: url('v870-tang-36.jpg'); /* Correto! */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-}
-
-
- html {
+ body, html {
   font-family: Arial, sans-serif;
   height: 100%;
   margin: 0;

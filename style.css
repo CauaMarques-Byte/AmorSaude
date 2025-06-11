@@ -1,5 +1,5 @@
     body {
-    background-image: url('v870-tang-36.jpg'); /* Correto! */
+    background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -40,7 +40,6 @@
 
 .cards-container {
   display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;

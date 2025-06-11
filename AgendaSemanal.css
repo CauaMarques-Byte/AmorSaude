@@ -1,4 +1,3 @@
- /* Estilo da fonte Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
         body {
             font-family: 'Inter', sans-serif;
@@ -6,7 +5,7 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden; /* Evita rolagem horizontal */
-            background-image: url('v870-tang-36.jpg'); /* Correto! */
+            background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -33,16 +32,19 @@
         .image-gallery {
             position: relative;
             width: 100%;
-            max-width: 1000px; /* Largura máxima para a galeria de imagens */
-            height: 1500px; /* Definindo uma altura fixa para o container da imagem */
+            max-width: 900px; /* Largura máxima para a galeria de imagens */
+            height: auto; /* Permite que a altura se ajuste ao conteúdo */
+            min-height: 250px; /* Altura mínima para garantir visibilidade */
+            max-height: 70vh; /* Altura máxima em relação à viewport para evitar imagens muito grandes */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* Garante que o conteúdo que extrapolar a imagem seja cortado */
         }
         .gallery-image {
             width: 100%;
             height: 100%; /* A imagem preencherá 100% da altura do seu contêiner */
-            object-fit: cover; /* A imagem cobrirá toda a área, cortando se necessário */
+            object-fit: contain; /* Garante que a imagem inteira seja visível, sem ser cortada */
             border-radius: 12px; /* Cantos arredondados */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
         }

@@ -9,15 +9,32 @@
 </head>
 <body>
     <div class="container">
-        <!-- Cabeçalho -->
-        <header class="header">
+            <!-- Ícone do menu (hambúrguer) para mobile -->
+            <div class="menu-icon" id="menuIcon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- Menu de Navegação -->
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <br>
             <a href="https://api.whatsapp.com/send?phone=556133022282&text=Olá!%20Gostaria%20de%20mais%20informações."
                target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;"> <!-- Diminuído para 20px -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; height: 20px;">
                 Enviar Mensagem
             </a>
+            
         </header>
 
+         <header class="header">
         <!-- Galeria de Imagens -->
         <div class="image-gallery">
             <!-- Imagem principal -->
@@ -27,5 +44,56 @@
                  class="gallery-image">
         </div>
     </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const generateHealthTipBtn = document.getElementById('generateHealthTipBtn');
+            const healthTipDisplay = document.getElementById('healthTipDisplay');
+            const menuIcon = document.getElementById('menuIcon');
+            const navLinks = document.getElementById('navLinks');
+
+            // Funcionalidade de gerar dica de saúde
+            if (generateHealthTipBtn && healthTipDisplay) {
+                generateHealthTipBtn.addEventListener('click', async () => {
+                    healthTipDisplay.innerHTML = '<p>A gerar uma dica de saúde... ✨</p>'; // Indicador de carregamento
+
+                    let chatHistory = [];
+                    const prompt = "Por favor, gere uma breve e positiva dica de saúde ou bem-estar. Seja conciso e motivador.";
+                    chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+                    const payload = { contents: chatHistory };
+                    const apiKey = ""; // Canvas will provide this in runtime
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        const result = await response.json();
+
+                        if (result.candidates && result.candidates.length > 0 &&
+                            result.candidates[0].content && result.candidates[0].content.parts &&
+                            result.candidates[0].content.parts.length > 0) {
+                            const text = result.candidates[0].content.parts[0].text;
+                            healthTipDisplay.innerHTML = `<p>${text}</p>`;
+                        } else {
+                            healthTipDisplay.innerHTML = '<p>Não foi possível gerar uma dica de saúde. Tente novamente.</p>';
+                        }
+                    } catch (error) {
+                        console.error('Erro ao chamar a API Gemini:', error);
+                        healthTipDisplay.innerHTML = '<p>Ocorreu um erro ao comunicar com o serviço. Por favor, tente mais tarde.</p>';
+                    }
+                });
+            }
+
+            // Funcionalidade do menu responsivo
+            if (menuIcon && navLinks) {
+                menuIcon.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

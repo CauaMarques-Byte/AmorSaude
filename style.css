@@ -165,6 +165,13 @@
     margin-top: 40px;
 }
 
+.main-footer {
+  width: 100vw; /* Tenta forçar 100% da largura da viewport */
+  position: relative; /* Pode ser necessário para posicionamento */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o elemento */
+}
+
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -173,7 +180,7 @@
     width: 100%; /* Garante que o container ocupe 100% da largura do main-footer */
     margin: 0 auto;
     gap: 15px;
-    padding: 0 100px; /* AUMENTADO: Padding horizontal para empurrar o conteúdo das bordas da tela */
+    padding: 0 20px; /* AUMENTADO: Padding horizontal para empurrar o conteúdo das bordas da tela */
     box-sizing: border-box; /* Garante que o padding não adicione à largura total */
 }
 
@@ -249,7 +256,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 0 20px;
+        padding: 0 15px;
     }
 
     .footer-brand,

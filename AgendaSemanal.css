@@ -1,0 +1,130 @@
+ /* Estilo da fonte Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Cor de fundo clara para combinar com a imagem */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita rolagem horizontal */
+            background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            letter-spacing: 0.2em; /* Espaçamento entre letras para 'PAULO COSTA' */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            position: relative;
+            width: 100%;
+            max-width: 1000px; /* Largura máxima para a galeria de imagens */
+            height: 1500px; /* Definindo uma altura fixa para o container da imagem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-image {
+            width: 100%;
+            height: 100%; /* A imagem preencherá 100% da altura do seu contêiner */
+            object-fit: cover; /* A imagem cobrirá toda a área, cortando se necessário */
+            border-radius: 12px; /* Cantos arredondados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid #ccc; /* Borda sutil */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none; /* Impede seleção de texto */
+            z-index: 10;
+        }
+        .nav-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #000;
+        }
+        .nav-arrow.left {
+            left: 10px;
+        }
+        .nav-arrow.right {
+            right: 10px;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            .header {
+                font-size: 2.2rem;
+            }
+            .nav-arrow {
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            .nav-arrow.left {
+                left: -60px; /* Move as setas para fora da imagem em telas maiores */
+            }
+            .nav-arrow.right {
+                right: -60px; /* Move as setas para fora da imagem em telas maiores */
+            }
+            .image-gallery {
+                padding: 0 70px; /* Espaço para as setas laterais */
+            }
+        }
+        @media (max-width: 767px) {
+            .nav-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 1.2rem;
+            }
+            .nav-arrow.left {
+                left: 5px;
+            }
+            .nav-arrow.right {
+                right: 5px;
+            }
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* Diminuído de 10px para 8px */
+            padding: 8px 12px; /* Diminuído de 10px 16px para 8px 12px */
+            border-radius: 8px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            font-size: 0.9rem; /* Diminuído o tamanho da fonte */
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+        }

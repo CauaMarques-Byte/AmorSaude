@@ -98,6 +98,18 @@
   margin: 0 auto 15px auto; /* Centraliza horizontalmente e dá espaçamento abaixo */
 }
 
+.card .icon {
+            font-size: 2rem; /* AUMENTADO: Tamanho dos ícones emoji (era 3rem) */
+            width: 64px; /* AUMENTADO: Largura do círculo de fundo (era 64px) */
+            height: 64px; /* AUMENTADO: Altura do círculo de fundo (era 64px) */
+            background-color: #e0ffe6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto; /* Centraliza horizontalmente e dá espaçamento abaixo */
+        }
+
 .card h3 {
    font-size: 18px;
   margin-bottom: 10px;
@@ -449,10 +461,8 @@
 }
 
 .icon-img {
-  width: 36px;
-  height: 36px;
+  width: 86px;
+  height: 86px;
   object-fit: contain;
   display: block;
 }
-
-

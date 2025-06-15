@@ -1,9 +1,15 @@
     body {
-    background-image: url('v870-tang-36.jpg'); /* Correto! */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #000;
+  padding: 20px;
 }
 
 
@@ -42,27 +48,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 0px;
-  max-width: 1500px;
-  margin: 0 auto;
+  gap: 24px;
 }
 
 .card {
-  background: #f8f8f8;
+  background-color: #fff;
   padding: 20px;
   width: 100%;
   max-width: 300px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform: scale(1);
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
 
 .card:hover {
-  background-color: #f0f0f0;
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
 }
 
 .card:hover,
@@ -75,20 +89,34 @@
 
 .icon {
   font-size: 36px;
+  width: 204px;
   margin-bottom: 15px;
   color: #ff90e8;
 }
 
 .card h3 {
-  font-size: 18px;
-  color: #222;
+   font-size: 18px;
   margin-bottom: 10px;
+  color: #222;
 }
 
 .card p {
   font-size: 14px;
-  color: #000000;
   margin-bottom: 15px;
+  color: #444;
+}
+
+.card-link {
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.card-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 .card a {
@@ -351,8 +379,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espaço entre logo e botão */
-  margin: 40px auto; /* Espaçamento externo e centralização */
+  margin-bottom: 40px;
 }
 
 .logo-container {
@@ -365,7 +392,7 @@
 
 .logo {
   width: 100%;
-  display: block;
+  height: auto;
 }
 
 /* Brilho da logo */
@@ -417,4 +444,20 @@
   transform: scale(1.05);
 }
 
+.icon {
+  width: 64px;
+  height: 64px;
+  background-color: #e0ffe6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto; /* Centraliza horizontalmente e dá espaçamento abaixo */
+}
 
+.icon-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+}

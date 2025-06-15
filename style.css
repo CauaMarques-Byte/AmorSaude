@@ -1,7 +1,7 @@
     body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-image: url('Imagens/v870-tang-36.jpg'); /* Correto! */
+    background-image: url('v870-tang-36.jpg'); /* Correto! */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
